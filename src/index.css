@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face {
+	font-family: Taroca;
+	src: local('Taroca'), url(./fonts/Taroca.ttf)
+}
+.taroca {font-family: Taroca;}
+
+@font-face {
+	font-family: Tauri;
+	src: local('Tauri'), url(./fonts/Tauri.ttf)
+}
+.tauri {font-family: Tauri;}
