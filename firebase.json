@@ -4,7 +4,8 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "build",
+	"public": "build",
+	"site": "pathfinder-character-sheet",
     "ignore": [
       "firebase.json",
       "**/.*",
