@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Segment} from 'semantic-ui-react'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+		<Segment.Group horizontal>
+			<Segment basic color="orange">Left</Segment>
+			<Segment inverted basic color="orange">Middle</Segment>
+			<Segment basic color="orange">Right</Segment>
+		</Segment.Group>
+		<Segment>
+
+		</Segment>
     </div>
   );
 }
