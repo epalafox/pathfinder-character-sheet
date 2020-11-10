@@ -1,12 +1,13 @@
 import React from 'react';
 import {Grid, Segment, Image, Input, Label, Form} from 'semantic-ui-react'
 import AbilityScores from './components/AbilityScores'
+import ArmorClass from './components/ArmorClass'
 
 function App() {
   return (
 	<Segment className='App'>
 		<Form>
-			<Grid className='app-grid'>
+			<Grid className='app-grid' doubling stackable>
 				<Grid.Row className = 'app-grid-header'>
 					<Grid.Column width={4}>
 						<Image src='2E-Logo.png' />
@@ -39,8 +40,11 @@ function App() {
 					</Grid.Column>
 				</Grid.Row>
 				<Grid.Row>
-					<Grid.Column width={4}>
+					<Grid.Column tablet={6} largeScreen={4}>
 						<AbilityScores />
+					</Grid.Column>
+					<Grid.Column tablet={10} largeScreen={6}>
+						<ArmorClass />
 					</Grid.Column>
 				</Grid.Row>
 			</Grid>
