@@ -21,14 +21,47 @@
 .app-grid-header:hover{
 	box-shadow: 0px 0px 5px #000000;
 }
-.abilityScores-segment
+.custom-segment
 {
 	box-shadow: 0px 0px 10px #000000 !important;
 }
-.abilityScores-segment:hover
+.custom-segment:hover
 {
 	box-shadow: 0px 0px 5px #000000 !important;
 }
+.container-segment
+{
+	padding-top: 0px !important;
+}
+.ui.horizontal.segments
+{
+	margin-top: 5px !important;
+	margin-bottom: 5px !important;
+}
+
+.armorClass-background{
+	position: absolute;
+	left: -20px;
+	top: -80px;
+	width: 200px;
+	height: auto;
+}
+
+.armorClass-calc
+{
+	padding-top: 0px !important;
+	margin-top: 0px !important;
+	padding-left: 50px !important;
+}
+.armorClass-circular
+{
+	border: solid black 5px !important;
+	margin-left: 50px !important;
+	width: 110px;
+	height: 110px;
+}
+
+
 .no-radius-field > * { border-radius: 0 !important;}
 
 .no-padding > * { padding: 0 !important;}
@@ -38,22 +71,20 @@
 }
 .modifier-padding { padding: 0 !important;}
 .modifier-padding > p { 
-	margin-left: 40px !important;
-    margin-right: 40px !important;
-    margin-bottom: 19px !important;
     padding-top: 10px !important;
-    padding-bottom: 5px !important;
+    padding-bottom: 10px !important;
 	background-color: #0000000F !important;
 }
 .input-center > input { 
 	margin-bottom: 10px !important;
-	margin-inline-start: 40px !important;
-	margin-inline-end: 40px !important;
+	margin-inline-start: 20px !important;
+	margin-inline-end: 20px !important;
 	padding-top: 10px !important;
 	padding-bottom: 10px !important;
 	border: 0 !important;
 	background-color: #0000000F !important;
-	text-align: center !important;}
+	text-align: center !important;
+}
 
 @font-face {
 	font-family: Taroca;
