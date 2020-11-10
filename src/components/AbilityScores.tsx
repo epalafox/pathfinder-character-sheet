@@ -1,23 +1,27 @@
 import React from 'react';
-import { Grid, Segment, Image, Input, Label, Form } from 'semantic-ui-react'
-import AbilityScoreModel from '../models/AbilityScores'
+import { Grid, Segment, Input, Label } from 'semantic-ui-react'
+import PlayerCharacterModel from '../models/PlayerCharacter'
+import AbilityScoresModel from '../models/AbilityScores'
 
 interface IProps {
 }
 interface IState {
-    abilityScore: AbilityScoreModel
+    character: PlayerCharacterModel
 }
 
 export default class AbilityScore extends React.Component<IProps, IState>{
     constructor(props: IProps) {
         super(props)
         this.state = {
-            abilityScore: new AbilityScoreModel()
+            character: {
+                abilityScores: new AbilityScoresModel()
+            }
         }
         this._setScore = this._setScore.bind(this)
     }
     _setScore(value: number, score: string) {
-        var abilityScore = this.state.abilityScore
+        var character = this.state.character
+        var abilityScore = character.abilityScores
         if (value < 0) {
             value = 0;
         }
@@ -41,11 +45,12 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                 abilityScore.charismaScore = value | 0
                 break;
         }
-        this.setState({ abilityScore: abilityScore })
+        character.abilityScores = abilityScore
+        this.setState({ character: character })
     }
     render() {
         return (
-            <Segment.Group>
+            <Segment.Group className='abilityScores-segment'>
                 <Segment className='taroca' textAlign='center' size='massive' inverted color='blue'>ABILITY SCORES</Segment>
                 <Segment>
                     <Grid>
@@ -54,7 +59,7 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                                 <Segment size='big' textAlign='center'>
                                     <Segment className='modifier-padding' basic size='big'>
                                         <p>
-                                            {this.state.abilityScore.strengthMod}
+                                            {this.state.character.abilityScores.strengthMod}
                                         </p>
                                     </Segment>
                                     <Label attached='bottom' color='orange' className='tauri'>STR</Label>
@@ -70,7 +75,7 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                                             fluid
                                             className='no-padding input-center'
                                             onChange={(ev, data) => { this._setScore(parseInt(data.value), 'STR') }}
-                                            value={this.state.abilityScore.strengthScore} />
+                                            value={this.state.character.abilityScores.strengthScore} />
                                     </Segment>
                                     <Label attached='bottom' color='orange' className='tauri'>STRENGTH</Label>
                                 </Segment>
@@ -81,7 +86,7 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                                 <Segment size='big' textAlign='center'>
                                     <Segment className='modifier-padding' basic size='big'>
                                         <p>
-                                            {this.state.abilityScore.dexterityMod}
+                                            {this.state.character.abilityScores.dexterityMod}
                                         </p>
                                     </Segment>
                                     <Label attached='bottom' color='orange' className='tauri'>DEX</Label>
@@ -97,7 +102,7 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                                             fluid
                                             className='no-padding input-center'
                                             onChange={(ev, data) => { this._setScore(parseInt(data.value), 'DEX') }}
-                                            value={this.state.abilityScore.dexterityScore} />
+                                            value={this.state.character.abilityScores.dexterityScore} />
                                     </Segment>
                                     <Label attached='bottom' color='orange' className='tauri'>DEXTERITY</Label>
                                 </Segment>
@@ -108,7 +113,7 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                                 <Segment size='big' textAlign='center'>
                                     <Segment className='modifier-padding' basic size='big'>
                                         <p>
-                                            {this.state.abilityScore.constitutionMod}
+                                            {this.state.character.abilityScores.constitutionMod}
                                     </p>
                                     </Segment>
                                     <Label attached='bottom' color='orange' className='tauri'>CON</Label>
@@ -124,7 +129,7 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                                                 fluid
                                                 className='no-padding input-center'
                                                 onChange={(ev, data) => { this._setScore(parseInt(data.value), 'CON') }}
-                                                value={this.state.abilityScore.constitutionScore} />
+                                                value={this.state.character.abilityScores.constitutionScore} />
                                     </Segment>
                                     <Label attached='bottom' color='orange' className='tauri'>CONSTITUTION</Label>
                                 </Segment>
@@ -135,7 +140,7 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                                 <Segment size='big' textAlign='center'>
                                     <Segment className='modifier-padding' basic size='big'>
                                         <p>
-                                            {this.state.abilityScore.intelligenceMod}
+                                            {this.state.character.abilityScores.intelligenceMod}
                                     </p>
                                     </Segment>
                                     <Label attached='bottom' color='orange' className='tauri'>INT</Label>
@@ -151,7 +156,7 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                                                 fluid
                                                 className='no-padding input-center'
                                                 onChange={(ev, data) => { this._setScore(parseInt(data.value), 'INT') }}
-                                                value={this.state.abilityScore.intelligenceScore} />
+                                                value={this.state.character.abilityScores.intelligenceScore} />
                                     </Segment>
                                     <Label attached='bottom' color='orange' className='tauri'>INTELLIGENCE</Label>
                                 </Segment>
@@ -162,7 +167,7 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                                 <Segment size='big' textAlign='center'>
                                     <Segment className='modifier-padding' basic size='big'>
                                         <p>
-                                            {this.state.abilityScore.wisdomMod}
+                                            {this.state.character.abilityScores.wisdomMod}
                                     </p>
                                     </Segment>
                                     <Label attached='bottom' color='orange' className='tauri'>WIS</Label>
@@ -178,7 +183,7 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                                                 fluid
                                                 className='no-padding input-center'
                                                 onChange={(ev, data) => { this._setScore(parseInt(data.value), 'WIS') }}
-                                                value={this.state.abilityScore.wisdomScore} />
+                                                value={this.state.character.abilityScores.wisdomScore} />
                                     </Segment>
                                     <Label attached='bottom' color='orange' className='tauri'>WISDOM</Label>
                                 </Segment>
@@ -189,8 +194,8 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                                 <Segment size='big' textAlign='center'>
                                     <Segment className='modifier-padding' basic size='big'>
                                         <p>
-                                            {this.state.abilityScore.charismaMod}
-                                    </p>
+                                            {this.state.character.abilityScores.charismaMod}
+                                        </p>
                                     </Segment>
                                     <Label attached='bottom' color='orange' className='tauri'>CHA</Label>
                                 </Segment>
@@ -205,7 +210,7 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                                                 fluid
                                                 className='no-padding input-center'
                                                 onChange={(ev, data) => { this._setScore(parseInt(data.value), 'CHA') }}
-                                                value={this.state.abilityScore.charismaScore} />
+                                                value={this.state.character.abilityScores.charismaScore} />
                                     </Segment>
                                     <Label attached='bottom' color='orange' className='tauri'>CHARISMA</Label>
                                 </Segment>

@@ -1,16 +1,41 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.App {
+	background-image: url('./wood.jpg') !important;
+	border-radius: 0px !important;
 }
-
+.row{
+	padding:0px !important
+}
+.app-grid {
+	background-color: #FFFFFF99 !important;
+	border-radius: 10px !important;
+	margin: 5px 5px 5px 5px !important;
+	padding: 10px 10px 15px 10px !important;
+	box-shadow: inset 0px 0px 15px 10px #00000033 !important;
+}
+.app-grid-header {
+	background-color: #FFFFFFAA;
+	margin: 10px 10px 5px 10px;
+	border-radius: 20px;
+	box-shadow: 0px 0px 10px #000000;
+}
+.app-grid-header:hover{
+	box-shadow: 0px 0px 5px #000000;
+}
+.abilityScores-segment
+{
+	box-shadow: 0px 0px 10px #000000 !important;
+}
+.abilityScores-segment:hover
+{
+	box-shadow: 0px 0px 5px #000000 !important;
+}
 .no-radius-field > * { border-radius: 0 !important;}
 
 .no-padding > * { padding: 0 !important;}
-.score-padding { padding: 0 !important;}
+.score-padding {
+	padding: 0 !important;
+	margin-bottom: 2px;
+}
 .modifier-padding { padding: 0 !important;}
 .modifier-padding > p { 
 	margin-left: 40px !important;
