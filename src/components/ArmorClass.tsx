@@ -1,5 +1,5 @@
 import React from 'react';
-import { Segment, Header, Image, Label } from 'semantic-ui-react'
+import { Segment, Header } from 'semantic-ui-react'
 import PlayerCharacterModel from '../models/PlayerCharacter'
 import AbilityScoresModel from '../models/AbilityScores'
 
@@ -27,7 +27,7 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                     </Header>
                 </Segment>
                 <Segment className='container-segment'>
-                    <img src='/armor.png' className='armorClass-background' />
+                    <img alt='armor' src='/armor.png' className='armorClass-background' />
                     <Segment basic className='armorClass-calc'>
                         <Segment circular className='armorClass-circular'>
                             <Header as='h2'>
