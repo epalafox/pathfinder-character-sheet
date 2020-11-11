@@ -49,7 +49,7 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                                     </Header>
                                     </Segment>
                                 </Grid.Column>
-                                <Grid.Column>
+                                <Grid.Column verticalAlign='middle'>
                                     <Segment.Group horizontal>
                                         <Segment>
                                             <Label attached='top'>DEX</Label>
@@ -57,7 +57,9 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                                                 10
                                         </Header>
                                         </Segment>
-                                        <Divider vertical>OR</Divider>
+                                        <Segment inverted color='black' basic >
+                                            <Label inverted color='black' size='mini'>OR</Label>
+                                        </Segment>
                                         <Segment>
                                             <Label attached='top'>CAP</Label>
                                             <Header>
