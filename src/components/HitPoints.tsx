@@ -9,7 +9,7 @@ interface IState {
     character: PlayerCharacterModel
 }
 
-export default class SavingThrows extends React.Component<IProps, IState>{
+export default class HitPoints extends React.Component<IProps, IState>{
     constructor(props: IProps) {
         super(props)
         this.state = {
@@ -23,7 +23,7 @@ export default class SavingThrows extends React.Component<IProps, IState>{
             <Segment.Group className='custom-segment'>
                 <Segment className='taroca' textAlign='center' size='massive' inverted color='blue'>
                     <Header size='medium' className='taroca'>
-                        Saving Throws
+                        Hit Points
                     </Header>
                 </Segment>
                 <Segment className='container-segment'>
