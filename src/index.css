@@ -33,25 +33,33 @@
 {
 	padding-top: 0px !important;
 }
-.ui.horizontal.segments
+.segment-inline
 {
 	margin-top: 5px !important;
 	margin-bottom: 5px !important;
+	border: none !important;
+	box-shadow: none !important;
+	align-items: center !important;
 }
 
 .armorClass-background{
 	position: absolute;
-	left: -20px;
-	top: -80px;
+	left: -180px;
+	top: -50px;
 	width: 200px;
 	height: auto;
+}
+.armorClass-value{
+	position: absolute;
+	left: -110px;
+	top: 50px;
 }
 
 .armorClass-calc
 {
 	padding-top: 0px !important;
 	margin-top: 0px !important;
-	padding-left: 50px !important;
+	margin-left: 160px !important;
 }
 .armorClass-circular
 {
@@ -60,7 +68,33 @@
 	width: 110px;
 	height: 110px;
 }
-
+.armorClass-shield
+{
+	border: solid black 5px !important;
+	border-radius: 50rem !important;
+	padding: 25px 0px 15px 0px !important;
+	width: 50px !important;
+	height: 80px !important;
+	
+}
+.armorClass-prof
+{
+	padding: 0px !important;
+	margin-top: 20px !important;
+	margin-bottom: 20px !important;
+}
+.armorProf-segment {
+	padding: 0 !important;
+	margin: 0 !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+.armorProf-segment-group {
+	padding: 5px !important;
+	margin: 0 !important;
+	border: none !important;
+	box-shadow: none !important;
+}
 
 .no-radius-field > * { border-radius: 0 !important;}
 
@@ -103,3 +137,45 @@
 	src: local('Tauri'), url(./fonts/Tauri.ttf)
 }
 .tauri {font-family: Tauri !important;}
+
+@media only screen and (max-width: 1600px)
+{
+	.ac-Cont{
+		display: flex;
+		justify-content: center;
+	}
+	.armorClass-background{
+		position: relative;
+		left: 0;
+		top: 0;
+		width: 50px;
+		height: auto;
+	}
+	.armorClass-value{
+		position: relative;
+		left: 0;
+		top:0;
+	}
+	.armorClass-circular
+	{
+		border: solid black 5px !important;
+		width: 100px;
+		height: 100px;
+		padding: 10px 15px 10px 15px !important;
+	}
+	.armorClass-calc
+	{
+		padding-top: 0px !important;
+		margin-top: 0px !important;
+		margin-left: 0px !important;
+	}
+	.armorClass-shield
+	{
+		border: solid black 5px !important;
+		border-radius: 50rem !important;
+		padding: 5px 2px 7px 2px !important;
+		width: 25px !important;
+		height: 40px !important;
+		
+	}
+}

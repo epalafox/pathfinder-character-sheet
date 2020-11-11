@@ -7,7 +7,7 @@ function App() {
   return (
 	<Segment className='App'>
 		<Form>
-			<Grid className='app-grid' doubling stackable>
+			<Grid className='app-grid' stackable>
 				<Grid.Row className = 'app-grid-header'>
 					<Grid.Column width={4}>
 						<Image src='2E-Logo.png' />
@@ -32,18 +32,18 @@ function App() {
 					</Grid.Column>
 					<Grid.Column width={3}>
 						<Segment basic>
-							<Input className='no-radius-field' label={<Label color='black' className='tauri'>Level</Label>} fluid size='massive' />
+							<Input className='no-radius-field' label={<Label color='black' attached='top' className='tauri'>Level</Label>} fluid />
 						</Segment>
 						<Segment basic>
-							<Input className='no-radius-field' label={<Label color='black' className='tauri'>Hero Points</Label>} fluid size='massive' />
+							<Input className='no-radius-field' label={<Label color='black' attached='top' className='tauri'>Hero Points</Label>} fluid />
 						</Segment>
 					</Grid.Column>
 				</Grid.Row>
 				<Grid.Row>
-					<Grid.Column tablet={6} largeScreen={4}>
+					<Grid.Column width={4}>
 						<AbilityScores />
 					</Grid.Column>
-					<Grid.Column tablet={10} largeScreen={6}>
+					<Grid.Column width={9}>
 						<ArmorClass />
 					</Grid.Column>
 				</Grid.Row>

@@ -57,7 +57,7 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                     </Header>
                 </Segment>
                 <Segment className='container-segment'>
-                <Segment.Group horizontal>
+                <Segment.Group horizontal className='segment-inline'>
                     <Segment textAlign='center'>
                         <Segment className='modifier-padding' basic>
                             <p>
@@ -80,7 +80,7 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                         <Label attached='bottom' color='orange' className='tauri'>STRENGTH</Label>
                     </Segment>
                 </Segment.Group>
-                <Segment.Group horizontal>
+                <Segment.Group horizontal className='segment-inline'>
                     <Segment textAlign='center'>
                         <Segment className='modifier-padding' basic>
                             <p>
@@ -103,7 +103,7 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                         <Label attached='bottom' color='orange' className='tauri'>DEXTERITY</Label>
                     </Segment>
                 </Segment.Group>
-                <Segment.Group horizontal>
+                <Segment.Group horizontal className='segment-inline'>
                     <Segment textAlign='center'>
                         <Segment className='modifier-padding' basic>
                             <p>
@@ -126,7 +126,7 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                         <Label attached='bottom' color='orange' className='tauri'>CONSTITUTION</Label>
                     </Segment>
                 </Segment.Group>
-                <Segment.Group horizontal>
+                <Segment.Group horizontal className='segment-inline'>
                     <Segment textAlign='center'>
                         <Segment className='modifier-padding' basic>
                             <p>
@@ -149,7 +149,7 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                         <Label attached='bottom' color='orange' className='tauri'>INTELLIGENCE</Label>
                     </Segment>
                 </Segment.Group>
-                <Segment.Group horizontal>
+                <Segment.Group horizontal className='segment-inline'>
                     <Segment textAlign='center'>
                         <Segment className='modifier-padding' basic>
                             <p>
@@ -172,7 +172,7 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                         <Label attached='bottom' color='orange' className='tauri'>WISDOM</Label>
                     </Segment>
                 </Segment.Group>
-                <Segment.Group horizontal>
+                <Segment.Group horizontal className='segment-inline'>
                     <Segment textAlign='center'>
                         <Segment className='modifier-padding' basic>
                             <p>
