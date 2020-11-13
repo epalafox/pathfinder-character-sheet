@@ -37,6 +37,8 @@
 }
 .segment-inline
 {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
 	margin-top: 5px !important;
 	margin-bottom: 5px !important;
 	border: none !important;
@@ -46,22 +48,22 @@
 
 .armorClass-background{
 	position: absolute;
-	left: -180px;
+	left: -120px;
 	top: -50px;
-	width: 200px;
+	width: 150px;
 	height: auto;
 }
 .armorClass-value{
 	position: absolute;
-	left: -110px;
-	top: 50px;
+	left: -90px;
+	top: 25px;
 }
 
 .armorClass-calc
 {
 	padding-top: 0px !important;
 	margin-top: 0px !important;
-	margin-left: 160px !important;
+	margin-left: 100px !important;
 }
 .armorClass-circular
 {
@@ -81,7 +83,6 @@
 }
 .armorClass-prof
 {
-	padding: 0px !important;
 	margin-top: 20px !important;
 	margin-bottom: 20px !important;
 }
@@ -132,6 +133,14 @@
 	text-align: center !important;
 }
 
+.proficency{
+	padding: 20px 0px !important;
+}
+.proficency-label{
+	padding: 9px 0px !important;
+	flex: 1;
+	justify-self: stretch;
+}
 @font-face {
 	font-family: Taroca;
 	src: local('Taroca'), url(./fonts/Taroca.ttf)

@@ -1,7 +1,8 @@
 import React from 'react';
-import { Segment, Header, Label, Divider, Grid } from 'semantic-ui-react'
+import { Segment, Header, Label, Grid } from 'semantic-ui-react'
 import PlayerCharacterModel from '../models/PlayerCharacter'
 import AbilityScoresModel from '../models/AbilityScores'
+import Proficency from './Proficency';
 
 interface IProps {
 }
@@ -41,24 +42,21 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                                 </div>
                             </div>
                             <Grid stackable columns={5} className='segment-inline'>
-                                <Grid.Column>
-                                    <Segment>
-                                        <Label attached='top'>DC BASE</Label>
-                                        <Header>
+                                <Grid.Column className='segment-inline'>
+                                    <Segment basic>
+                                        <Header as='h1'>
+                                            <Header.Subheader>DC BASE</Header.Subheader>
                                             10
-                                    </Header>
+                                        </Header>
                                     </Segment>
                                 </Grid.Column>
-                                <Grid.Column verticalAlign='middle'>
+                                <Grid.Column className='segment-inline' verticalAlign='middle'>
                                     <Segment.Group horizontal>
                                         <Segment>
                                             <Label attached='top'>DEX</Label>
                                             <Header>
                                                 10
                                         </Header>
-                                        </Segment>
-                                        <Segment inverted color='black' basic >
-                                            <Label inverted color='black' size='mini'>OR</Label>
                                         </Segment>
                                         <Segment>
                                             <Label attached='top'>CAP</Label>
@@ -68,7 +66,7 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                                         </Segment>
                                     </Segment.Group>
                                 </Grid.Column>
-                                <Grid.Column>
+                                <Grid.Column className='segment-inline'>
                                     <Segment>
                                         <Label attached='top'>PROF</Label>
                                         <Header>
@@ -76,35 +74,10 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                                     </Header>
                                     </Segment>
                                 </Grid.Column>
-                                <Grid.Column>
-                                    <Segment.Group horizontal>
-                                        <Segment>
-                                            <Label attached='top'>T</Label>
-                                            <Header>
-                                                -
-                                        </Header>
-                                        </Segment>
-                                        <Segment>
-                                            <Label attached='top'>E</Label>
-                                            <Header>
-                                                -
-                                        </Header>
-                                        </Segment>
-                                        <Segment>
-                                            <Label attached='top'>M</Label>
-                                            <Header>
-                                                -
-                                            </Header>
-                                        </Segment>
-                                        <Segment>
-                                            <Label attached='top'>L</Label>
-                                            <Header>
-                                                -
-                                            </Header>
-                                        </Segment>
-                                    </Segment.Group>
+                                <Grid.Column className='segment-inline'>
+                                    <Proficency proficency='U' />
                                 </Grid.Column>
-                                <Grid.Column>
+                                <Grid.Column className='segment-inline'>
                                     <Segment>
                                         <Label attached='top'>ITEM</Label>
                                         <Header>
@@ -119,125 +92,25 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                                 <Grid.Column width={4} className='armorClass-prof'>
                                     <Segment basic className='armorProf-segment'>
                                         <Label className='tauri' size='tiny' color='black'>UNARMORED</Label>
-                                        <Segment.Group horizontal className='armorProf-segment-group'>
-                                            <Segment>
-                                                <Label size='tiny' attached='top'>T</Label>
-                                                <Header>
-                                                    -
-                                            </Header>
-                                            </Segment>
-                                            <Segment>
-                                                <Label size='tiny' attached='top'>E</Label>
-                                                <Header>
-                                                    -
-                                            </Header>
-                                            </Segment>
-                                            <Segment>
-                                                <Label size='tiny' attached='top'>M</Label>
-                                                <Header>
-                                                    -
-                                            </Header>
-                                            </Segment>
-                                            <Segment>
-                                                <Label size='tiny' attached='top'>L</Label>
-                                                <Header>
-                                                    -
-                                            </Header>
-                                            </Segment>
-                                        </Segment.Group>
+                                        <Proficency proficency='U' />
                                     </Segment>
                                 </Grid.Column>
                                 <Grid.Column width={4} className='armorClass-prof'>
                                     <Segment basic className='armorProf-segment'>
                                         <Label size='tiny' className='tauri' color='black'>LIGHT</Label>
-                                        <Segment.Group horizontal className='armorProf-segment-group'>
-                                            <Segment>
-                                                <Label size='tiny' attached='top'>T</Label>
-                                                <Header>
-                                                    -
-                                            </Header>
-                                            </Segment>
-                                            <Segment>
-                                                <Label size='tiny' attached='top'>E</Label>
-                                                <Header>
-                                                    -
-                                            </Header>
-                                            </Segment>
-                                            <Segment>
-                                                <Label size='tiny' attached='top'>M</Label>
-                                                <Header>
-                                                    -
-                                            </Header>
-                                            </Segment>
-                                            <Segment>
-                                                <Label size='tiny' attached='top'>L</Label>
-                                                <Header>
-                                                    -
-                                            </Header>
-                                            </Segment>
-                                        </Segment.Group>
+                                        <Proficency proficency='U' />
                                     </Segment>
                                 </Grid.Column>
                                 <Grid.Column width={4} className='armorClass-prof'>
                                     <Segment basic className='armorProf-segment'>
                                         <Label size='tiny' className='tauri' color='black'>MEDIUM</Label>
-                                        <Segment.Group horizontal className='armorProf-segment-group'>
-                                            <Segment>
-                                                <Label size='tiny' attached='top'>T</Label>
-                                                <Header>
-                                                    -
-                                        </Header>
-                                            </Segment>
-                                            <Segment>
-                                                <Label size='tiny' attached='top'>E</Label>
-                                                <Header>
-                                                    -
-                                        </Header>
-                                            </Segment>
-                                            <Segment>
-                                                <Label size='tiny' attached='top'>M</Label>
-                                                <Header>
-                                                    -
-                                        </Header>
-                                            </Segment>
-                                            <Segment>
-                                                <Label size='tiny' attached='top'>L</Label>
-                                                <Header>
-                                                    -
-                                        </Header>
-                                            </Segment>
-                                        </Segment.Group>
+                                        <Proficency proficency='U' />
                                     </Segment>
                                 </Grid.Column>
                                 <Grid.Column width={4} className='armorClass-prof'>
                                     <Segment basic className='armorProf-segment'>
                                         <Label size='tiny' className='tauri' color='black'>HEAVY</Label>
-                                        <Segment.Group horizontal className='armorProf-segment-group'>
-                                            <Segment>
-                                                <Label size='tiny' attached='top'>T</Label>
-                                                <Header>
-                                                    -
-                                            </Header>
-                                            </Segment>
-                                            <Segment>
-                                                <Label size='tiny' attached='top'>E</Label>
-                                                <Header>
-                                                    -
-                                            </Header>
-                                            </Segment>
-                                            <Segment>
-                                                <Label size='tiny' attached='top'>M</Label>
-                                                <Header>
-                                                    -
-                                            </Header>
-                                            </Segment>
-                                            <Segment>
-                                                <Label size='tiny' attached='top'>L</Label>
-                                                <Header>
-                                                    -
-                                            </Header>
-                                            </Segment>
-                                        </Segment.Group>
+                                        <Proficency proficency='U' />
                                     </Segment>
                                 </Grid.Column>
                             </Grid>

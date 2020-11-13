@@ -28,7 +28,6 @@ export default class SavingThrows extends React.Component<IProps, IState>{
                 </Segment>
                 <Segment className='container-segment'>
                 </Segment>
-
             </Segment.Group>
         );
     }

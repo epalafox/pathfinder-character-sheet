@@ -1,5 +1,5 @@
 import React from 'react';
-import { Segment, Header } from 'semantic-ui-react'
+import { Segment, Header, Grid, Input, Label } from 'semantic-ui-react'
 import PlayerCharacterModel from '../models/PlayerCharacter'
 import AbilityScoresModel from '../models/AbilityScores'
 
@@ -26,7 +26,47 @@ export default class HitPoints extends React.Component<IProps, IState>{
                         Hit Points
                     </Header>
                 </Segment>
-                <Segment className='container-segment'>
+                <Segment>
+                    <Grid>
+                        <Grid.Row columns={3}>
+                            <Grid.Column>
+                                <Segment>
+                                    <Label attached='top'>MAX</Label>
+                                    <Input  />
+                                </Segment>
+                            </Grid.Column>
+                            <Grid.Column>
+                                <Segment>
+                                    <Label attached='top'>CURRENT</Label>
+                                    <Input  />
+                                </Segment>
+                            </Grid.Column>
+                            <Grid.Column>
+                                <Segment>
+                                    <Label attached='top'>TEMPORARY</Label>
+                                    <Input  />
+                                </Segment>
+                            </Grid.Column>
+                        </Grid.Row>
+                        <Grid.Row columns={2}>
+                            <Grid.Column>
+                                <Segment>
+                                    <Label attached='top'>DYING</Label>
+                                    <Input  />
+                                </Segment>
+                            </Grid.Column>
+                            <Grid.Column>
+                                <Segment>
+                                    <Label attached='top'>WOUNDED</Label>
+                                    <Input  />
+                                </Segment>
+                            </Grid.Column>
+                        </Grid.Row>
+                        <Grid.Row>
+                            <Grid.Column>
+                            </Grid.Column>
+                        </Grid.Row>
+                    </Grid>
                 </Segment>
 
             </Segment.Group>
