@@ -38,7 +38,8 @@
     grid-column: 1 / 3;
     grid-row: 2 / 3;
     text-align: center;
-    margin: 0;
+	margin: 0;
+	color: $red;
 }
 
 .reference__proficencies {
@@ -59,7 +60,8 @@
 
 .reference__actions {
     @include Tauri;
-    margin: 0;
+	margin: 0;
+	font-size: 13px;
 }
 
 .reference__actions--icon {

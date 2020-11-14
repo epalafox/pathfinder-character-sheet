@@ -1,45 +1,5 @@
 .main-container {
-    min-height: 90vh;
-}
-
-.character {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 120px);
-    margin-top: 10px;
-    gap: 10px;
-}
-
-.character>div {
-    background-color: lightsalmon;
-}
-
-.character__ability-scores {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 4;
-}
-
-.character__armor-class {
-    grid-column: 3 / span 3;
-    grid-row: 1 / span 3;
-}
-
-.character__saving-throws {
-    grid-column: 3 / span 3;
-    grid-row: 4 / span 2;
-}
-
-.character__hit-points {
-    grid-column: 6 / span 1;
-    grid-row: 1 / span 2;
-}
-
-.character__perception {
-    grid-column: 6 / span 1;
-    grid-row: 3 / span 3;
-}
-
-.character__class-dc {
-    grid-column: 1 / span 2;
-    grid-row: 5 / span 1;
+	min-height: 90vh;
+	background-image: url(../img/fondo.png);
+	background-size: 100%;
 }

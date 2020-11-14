@@ -1,0 +1,13 @@
+@import '../Variables.scss';
+.section-title{
+	background-color: $blue;
+	width: 100%;
+	height: 40px;
+	text-align: center;
+}
+.section-title__h1{
+	@include Taroca;
+	color: white;
+	font-size: 30px;
+	line-height: 40px;
+}

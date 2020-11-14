@@ -1,7 +1,8 @@
 import React from 'react';
 import { Segment, Input, Label, Header } from 'semantic-ui-react'
-import PlayerCharacterModel from '../models/PlayerCharacter'
-import AbilityScoresModel from '../models/AbilityScores'
+import PlayerCharacterModel from '../../models/PlayerCharacter'
+import AbilityScoresModel from '../../models/AbilityScores'
+import SectionTitle from '../../components/SectionTitle'
 
 interface IProps {
 }
@@ -50,12 +51,8 @@ export default class AbilityScore extends React.Component<IProps, IState>{
     }
     render() {
         return (
-            <Segment.Group className='custom-segment'>
-                <Segment textAlign='center' size='massive' inverted color='blue'>
-                    <Header size='medium' className='taroca'>
-                        Ability Scores
-                    </Header>
-                </Segment>
+            <div className='basic-scores__ability-scores'>
+				<SectionTitle text='Ability Scores' />
                 <Segment className='container-segment'>
                 <Segment.Group horizontal className='segment-inline'>
                     <Segment textAlign='center'>
@@ -196,7 +193,7 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                     </Segment>
                     </Segment.Group>
                 </Segment>
-            </Segment.Group>
+            </div>
         );
     }
 }
