@@ -2,7 +2,7 @@ import React from 'react';
 import { Segment, Header, Label, Grid } from 'semantic-ui-react'
 import PlayerCharacterModel from '../models/PlayerCharacter'
 import AbilityScoresModel from '../models/AbilityScores'
-import Proficency from './Proficency';
+import Proficency from '../components/Proficency';
 
 interface IProps {
 }

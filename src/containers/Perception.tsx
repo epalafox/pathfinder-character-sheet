@@ -2,6 +2,7 @@ import React from 'react';
 import { Segment, Header, Grid, Input, Label } from 'semantic-ui-react'
 import PlayerCharacterModel from '../models/PlayerCharacter'
 import AbilityScoresModel from '../models/AbilityScores'
+import Proficency from '../components/Proficency'
 
 interface IProps {
 }
@@ -23,47 +24,40 @@ export default class HitPoints extends React.Component<IProps, IState>{
             <Segment.Group className='custom-segment'>
                 <Segment className='taroca' textAlign='center' size='massive' inverted color='blue'>
                     <Header size='medium' className='taroca'>
-                        Hit Points
+                        Perception
                     </Header>
                 </Segment>
                 <Segment>
                     <Grid>
-                        <Grid.Row columns={3}>
+                        <Grid.Row columns={4}>
                             <Grid.Column>
                                 <Segment>
-                                    <Label attached='top'>MAX</Label>
+                                    <Label attached='top'>WIS</Label>
                                     <Input  />
                                 </Segment>
                             </Grid.Column>
                             <Grid.Column>
                                 <Segment>
-                                    <Label attached='top'>CURRENT</Label>
-                                    <Input  />
+                                    <Label attached='top'>WIS</Label>
+                                    <Input fluid  />
                                 </Segment>
                             </Grid.Column>
                             <Grid.Column>
                                 <Segment>
-                                    <Label attached='top'>TEMPORARY</Label>
-                                    <Input  />
-                                </Segment>
-                            </Grid.Column>
-                        </Grid.Row>
-                        <Grid.Row columns={2}>
-                            <Grid.Column>
-                                <Segment>
-                                    <Label attached='top'>DYING</Label>
-                                    <Input  />
+                                    <Proficency proficency='E' />
                                 </Segment>
                             </Grid.Column>
                             <Grid.Column>
                                 <Segment>
-                                    <Label attached='top'>WOUNDED</Label>
+                                    <Label attached='top'>WIS</Label>
                                     <Input  />
                                 </Segment>
                             </Grid.Column>
                         </Grid.Row>
-                        <Grid.Row>
+                        <Grid.Row columns={1}>
                             <Grid.Column>
+                                <Label>SENSES</Label>
+                                <Input fluid />
                             </Grid.Column>
                         </Grid.Row>
                     </Grid>

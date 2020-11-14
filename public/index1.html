@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        body{
+            font-family: Arial;
+        }
+        .main-container{
+            min-height: 90vh;
+        }
+        .header
+        {
+            display: grid;
+            grid-template-columns: 2fr 3fr 3fr 1fr;
+            grid-template-rows: 100px 100px;
+            gap: 10px;
+        }
+        .header > div{
+            background-color: lightblue;
+        }
+        .header__reference
+        {
+            grid-row: 1 / span 2;
+        }
+        .header__character-basics
+        {
+            grid-row: 1 / span 2;
+        }
+        .header__character-details
+        {
+            grid-row: 1 /span 2;
+        }
+        .header__character-level
+        {
+            grid-row: 1 / 2;
+        }
+        .header__character-hero-points
+        {
+            grid-row: 2 / 3;
+        }
+        .character
+        {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(6, 120px);
+            margin-top: 10px;
+            gap: 10px;
+        }
+        .character > div{
+            background-color: lightsalmon;
+        }
+        .character__ability-scores{
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 4;
+        }
+        .character__armor-class{
+            grid-column: 3 / span 3;
+            grid-row: 1 / span 3;
+        }
+        .character__saving-throws{
+            grid-column: 3 / span 3;
+            grid-row: 4 / span 2;
+        }
+        .character__hit-points{
+            grid-column: 6 / span 1;
+            grid-row: 1 / span 2;
+        }
+        .character__perception{
+            grid-column: 6 / span 1;
+            grid-row: 3 / span 3;
+        }
+        .character__class-dc{
+            grid-column: 1 / span 2;
+            grid-row: 5 / span 1;
+        }
+    </style>
+</head>
+<body>
+    <section class="header">
+        <div class="header__reference">item #1</div>
+        <div class="header__character-basics">item #2</div>
+        <div class="header__character-details">item #3</div>
+        <div class="header__character-level">item #4</div>
+        <div class="header__character-hero-points">item #5</div>
+    </section>
+    <section class="character">
+        <div class="character__ability-scores">character #1</div>
+        <div class="character__armor-class">character #2</div>
+        <div class="character__saving-throws">character #3</div>
+        <div class="character__hit-points">character #4</div>
+        <div class="character__perception">character #5</div>
+        <div class="character__class-dc">character #6</div>
+    </section>
+</body>
+</html>

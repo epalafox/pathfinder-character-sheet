@@ -1,0 +1,20 @@
+@font-face {
+    font-family: Taroca;
+    src: local('Taroca'), url(./fonts/Taroca.ttf)
+}
+
+@font-face {
+    font-family: Tauri;
+    src: local('Tauri'), url(./fonts/Tauri.ttf)
+}
+
+@mixin Tauri {
+    font-family: Tauri;
+}
+
+@mixin Taroca {
+    font-family: Taroca;
+}
+
+$red:rgb(102, 39, 43);
+$blue:rgb(21, 28, 90)
