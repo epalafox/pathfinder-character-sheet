@@ -6,7 +6,7 @@ interface IProps {
 interface IState {
     
 }
-class FloatingLabelField extends React.Component<IProps, IState>{
+class SectionTitle extends React.Component<IProps, IState>{
     render() {
         return (
             <div className='section-title'>
@@ -15,4 +15,4 @@ class FloatingLabelField extends React.Component<IProps, IState>{
         );
     }
 }
-export default FloatingLabelField;
+export default SectionTitle;

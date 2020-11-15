@@ -1,0 +1,42 @@
+@import '../Variables.scss';
+.labeled{
+	border-color: $red;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-style: solid;
+	border-width: 2px;
+	display: flex;
+	flex-direction: column;
+	background-color: $red;
+}
+.labeled__label{
+	color:white;
+	@include Tauri;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-color: $red;
+	border-width: 2px;
+	text-align: center;
+}
+.labeled__value{
+	background-color: white;
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+}
+.labeled__field{
+	margin: 0;
+	width: 100%;
+	text-align: center;
+	@include Tauri;
+}
+.labeled__input{
+	margin: 0;
+	height: 90%;
+	width: 100%;
+	text-align: center;
+	@include Tauri;
+	outline: $red solid;
+	font-size: 25px;
+    background-color: $grey;
+}

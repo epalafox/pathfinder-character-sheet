@@ -1,29 +1,21 @@
 import React from 'react';
-import { Segment, Header, Label, Grid, Input } from 'semantic-ui-react'
-import PlayerCharacterModel from '../models/PlayerCharacter'
-import AbilityScoresModel from '../models/AbilityScores'
-
+import '../styles/components/LabeledField.scss'
 interface IProps {
+	label:string,
+	value:string | number
 }
 interface IState {
-    character: PlayerCharacterModel
 }
 
 export default class LabeledInput extends React.Component<IProps, IState>{
-    constructor(props: IProps) {
-        super(props)
-        this.state = {
-            character: {
-                abilityScores: new AbilityScoresModel()
-            }
-        }
-    }
     render() {
         return (
-            <Segment>
-                <Label attached='top'>CAP</Label>
-                <Input  />
-            </Segment>
+            <div className='labeled'>
+				<label className='labeled__label'>{this.props.label}</label>
+				<div className='labeled__value'>
+					<input type='number' value={this.props.value} className='labeled__input' />
+				</div>
+			</div>
         );
     }
 }

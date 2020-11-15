@@ -16,7 +16,7 @@ class Reference extends React.Component<IProps, IState>{
         return (
             <div className="reference">
                 <div className='reference__image-div'>
-                    <img className='reference__image-div--image' src={logo} />
+                    <img className='reference__image-div--image' src={logo} alt='Pathfinder Logo' />
                 </div>
                 <h1 className='reference--h1'>Character Sheet</h1>
                 <div className='reference__proficencies'>
@@ -30,23 +30,23 @@ class Reference extends React.Component<IProps, IState>{
                 <div className='reference__actions'>
                     <table>
                         <tr>
-                            <td><img className='reference__actions--icon' src={oneAction} /></td>
+                            <td><img className='reference__actions--icon' src={oneAction} alt='single action icon' /></td>
                             <td className='reference__actions--text'>Single Action</td>
                         </tr>
                         <tr>
-                            <td><img className='reference__actions--icon' src={twoActions} /></td>
+                            <td><img className='reference__actions--icon' src={twoActions} alt='two-action activity  icon' /></td>
                             <td className='reference__actions--text'>Two-Action Activity</td>
                         </tr>
                         <tr>
-                            <td><img className='reference__actions--icon' src={threeActions} /></td>
+                            <td><img className='reference__actions--icon' src={threeActions} alt='three-action activity icon' /></td>
                             <td className='reference__actions--text'>Three-Action Activity</td>
                         </tr>
                         <tr>
-                            <td><img className='reference__actions--icon' src={freeAction} /></td>
+                            <td><img className='reference__actions--icon' src={freeAction} alt='free action icon' /></td>
                             <td className='reference__actions--text'>Free Action</td>
                         </tr>
                         <tr>
-                            <td><img className='reference__actions--icon' src={reaction} /></td>
+                            <td><img className='reference__actions--icon' src={reaction} alt='reaction icon' /></td>
                             <td className='reference__actions--text'>Reaction</td>
                         </tr>
                     </table>

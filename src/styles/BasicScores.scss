@@ -12,6 +12,46 @@
 	grid-row: 1 / span 5;
 	background-color: $secondary-red;
 }
+.ability-scores__container{
+	display: grid;
+	grid-template-rows: repeat(6, 80px);
+	gap:20px;
+}
+.ability-scores__container--row{
+	display: grid;
+	padding: 5px;
+	grid-template-columns: 20% 20% 40% 20%;
+}
+.ability-scores__row--modifier{
+	@include Tauri;
+	display: flex;
+	flex-direction: column;
+	padding-left: 10px;
+	color:white;
+	padding-top: 15px;
+}
+.ability-scores__row--modifier > h2{margin: 0;}
+.ability-scores__row--modifier > h5{margin: 0;}
+.ability-scores__row--score{
+	@include Tauri;
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+	padding-right: 10px;
+	color:white;
+	padding-top: 15px;
+}
+.ability-scores__row--score > h2{margin: 0;}
+.ability-scores__row--score > h5{margin: 0;}
+.ability-scores__container--row > input{
+	@include Tauri;
+	background-color: $grey;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	outline: $red solid;
+	font-size: 25px;
+	text-align: center;
+}
 .basic-scores__armor-class{
 	grid-column: 3 / span 3;
 	grid-row: 1 / span 3;
@@ -31,4 +71,32 @@
 .basic-scores__class-dc{
 	grid-column: 1 / span 2;
 	grid-row: 6 / span 1;
+	background-color: $secondary-red;
+}
+.class-dc__container{
+	display: grid;
+	grid-template-rows: 80px;
+	gap:10px;
+}
+.class-dc__row{
+	display: grid;
+	padding: 5px;
+	grid-template-columns: 19% 14% 14% 14% 20% 14%;
+    gap: 1%;
+}
+.class-dc__row--base{
+	color:white;
+	display: grid;
+	grid-template-columns: 20% 80%;
+	align-items: center;
+	justify-items: center;
+}
+.class-dc__base--equals{
+	grid-row: 1 / span 2;
+	margin:0;
+	@include Tauri;
+}
+.class-dc__base--h{
+	margin:0;
+	@include Tauri;
 }
