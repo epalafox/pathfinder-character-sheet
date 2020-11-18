@@ -1,0 +1,27 @@
+@import '../Variables.scss';
+.base-dc__container {
+    color: white;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: center;
+    justify-items: center;
+}
+
+.base-dc__container--equals {
+    grid-row: 1 / span 2;
+    margin: 0;
+    @include Tauri;
+}
+
+.base-dc__container--h {
+    margin: 0;
+    @include Tauri;
+}
+
+h5.base-dc__container--h {
+    align-self: end;
+}
+
+h1.base-dc__container--h {
+    align-self: start;
+}

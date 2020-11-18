@@ -1,102 +1,237 @@
 @import './Variables.scss';
+.basic-scores {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 120px);
+    margin-top: 10px;
+    gap: 10px;
+}
 
-.basic-scores{
-	display: grid;
-	grid-template-columns: repeat(6, 1fr);
-	grid-template-rows: repeat(6, 120px);
-	margin-top: 10px;
-	gap: 10px;
+.basic-scores__ability-scores {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 5;
+    background-color: $secondary-red;
 }
-.basic-scores__ability-scores{
-	grid-column: 1 / span 2;
-	grid-row: 1 / span 5;
-	background-color: $secondary-red;
+
+.ability-scores__container {
+    display: grid;
+    grid-template-rows: repeat(6, 80px);
+    gap: 20px;
 }
-.ability-scores__container{
-	display: grid;
-	grid-template-rows: repeat(6, 80px);
-	gap:20px;
+
+.ability-scores__container--row {
+    display: grid;
+    padding: 5px;
+    grid-template-columns: 20% 20% 40% 20%;
 }
-.ability-scores__container--row{
-	display: grid;
-	padding: 5px;
-	grid-template-columns: 20% 20% 40% 20%;
+
+.ability-scores__row--modifier {
+    @include Tauri;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    color: white;
+    padding-top: 15px;
 }
-.ability-scores__row--modifier{
-	@include Tauri;
-	display: flex;
-	flex-direction: column;
-	padding-left: 10px;
-	color:white;
-	padding-top: 15px;
+
+.ability-scores__row--modifier>h2 {
+    margin: 0;
 }
-.ability-scores__row--modifier > h2{margin: 0;}
-.ability-scores__row--modifier > h5{margin: 0;}
-.ability-scores__row--score{
-	@include Tauri;
-	display: flex;
-	flex-direction: column;
-	text-align: right;
-	padding-right: 10px;
-	color:white;
-	padding-top: 15px;
+
+.ability-scores__row--modifier>h5 {
+    margin: 0;
 }
-.ability-scores__row--score > h2{margin: 0;}
-.ability-scores__row--score > h5{margin: 0;}
-.ability-scores__container--row > input{
-	@include Tauri;
-	background-color: $grey;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	outline: $red solid;
-	font-size: 25px;
-	text-align: center;
+
+.ability-scores__row--score {
+    @include Tauri;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding-right: 10px;
+    color: white;
+    padding-top: 15px;
 }
-.basic-scores__armor-class{
-	grid-column: 3 / span 3;
-	grid-row: 1 / span 3;
+
+.ability-scores__row--score>h2 {
+    margin: 0;
 }
-.basic-scores__saving-throws{
-	grid-column: 3 / span 3;
-	grid-row: 4 / span 3;
+
+.ability-scores__row--score>h5 {
+    margin: 0;
 }
-.basic-scores__hit-points{
-	grid-column: 6 / span 1;
-	grid-row: 1 / span 4;
+
+.ability-scores__container--row>input {
+    @include Tauri;
+    background-color: $grey;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    outline: $red solid;
+    font-size: 25px;
+    text-align: center;
 }
-.basic-scores__perception{
-	grid-column: 6 / span 1;
-	grid-row: 5 / span 2;
+
+.basic-scores__armor-class {
+    grid-column: 3 / span 3;
+    grid-row: 1 / span 3;
+    position: relative;
+    background-color: $secondary-red;
 }
-.basic-scores__class-dc{
-	grid-column: 1 / span 2;
-	grid-row: 6 / span 1;
-	background-color: $secondary-red;
+
+.armor-class__container {
+    display: grid;
+    grid-template-rows: 80px 80px 10px 80px;
+    gap: 20px;
+    padding-left: 200px
 }
-.class-dc__container{
-	display: grid;
-	grid-template-rows: 80px;
-	gap:10px;
+
+.armor-class__image {
+    position: absolute;
+    width: 200px;
+    height: 321px;
 }
-.class-dc__row{
-	display: grid;
-	padding: 5px;
-	grid-template-columns: 19% 14% 14% 14% 20% 14%;
+
+.armor-class__value {
+    position: absolute;
+    left: 75px;
+    top: 75px;
+    border-radius: 80px;
+    width: 125px;
+    height: 125px;
+    background-color: white;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    justify-content: center;
+    border-color: $gold;
+    border-width: 8px;
+    border-style: solid;
+    @include Tauri;
+}
+
+.armor-class__value>h1 {
+    margin: 0;
+    align-self: center;
+}
+
+.armor-class__value>h2 {
+    margin: 0;
+    color: $red;
+    align-self: end;
+}
+
+.armor-class__dc {
+    display: grid;
+    grid-template-columns: 16% 32% 16% 16% 16%;
+    gap: 5px;
+    padding: 5px;
+}
+
+.or-labeled {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+}
+
+.or-labeled__left {
+    border-color: $red;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-right-style: none;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    background-color: $red;
+}
+
+.or-labeled__center {
+    flex: 1;
+    color: $red;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.or-labeled__center--text {
+    margin-top: 20px;
+    margin-bottom: 0;
+    background-color: white;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+    border-top: $red solid 2px;
+    border-bottom: $red solid 2px;
+}
+
+.or-labeled__center--text>h5 {
+    margin: 0;
+    line-height: 50px;
+}
+
+.or-labeled__right {
+    border-color: $red;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-style: solid;
+    border-left-style: none;
+    border-width: 2px;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    background-color: $red;
+}
+
+.armor-class__proficencies {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.armor-class__shield {
+    display: grid;
+    grid-template-columns: 16% 16% 16% 16% 16% 16%;
+    gap: 5px;
+}
+
+.armor-class__shield--h3 {
+    @include Tauri;
+    align-self: center;
+    justify-self: center;
+    color: white;
+}
+
+.basic-scores__saving-throws {
+    grid-column: 3 / span 3;
+    grid-row: 4 / span 3;
+}
+
+.basic-scores__hit-points {
+    grid-column: 6 / span 1;
+    grid-row: 1 / span 4;
+}
+
+.basic-scores__perception {
+    grid-column: 6 / span 1;
+    grid-row: 5 / span 2;
+}
+
+.basic-scores__class-dc {
+    grid-column: 1 / span 2;
+    grid-row: 6 / span 1;
+    background-color: $secondary-red;
+}
+
+.class-dc__container {
+    display: grid;
+    grid-template-rows: 80px;
+    gap: 10px;
+}
+
+.class-dc__row {
+    display: grid;
+    padding: 5px;
+    grid-template-columns: 19% 14% 14% 14% 20% 14%;
     gap: 1%;
-}
-.class-dc__row--base{
-	color:white;
-	display: grid;
-	grid-template-columns: 20% 80%;
-	align-items: center;
-	justify-items: center;
-}
-.class-dc__base--equals{
-	grid-row: 1 / span 2;
-	margin:0;
-	@include Tauri;
-}
-.class-dc__base--h{
-	margin:0;
-	@include Tauri;
 }

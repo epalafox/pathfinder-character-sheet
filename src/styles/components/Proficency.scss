@@ -1,0 +1,37 @@
+@import '../Variables.scss';
+.proficency {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.proficency__container {
+    border-color: $red;
+    border-style: solid;
+    border-width: 2px;
+    display: flex;
+    flex-direction: column;
+    background-color: $red;
+}
+
+.proficency__label {
+    color: white;
+    @include Tauri;
+    border-color: $red;
+    border-width: 2px;
+    text-align: center;
+}
+
+.proficency__value {
+    background-color: white;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.proficency__icon {
+    display: block;
+    margin: auto;
+}

@@ -4,8 +4,9 @@ import AbilityScoresModel from '../../models/AbilityScores'
 import Proficency from '../../components/Proficency'
 import SectionTitle from '../../components/SectionTitle'
 import BiseledField from '../../components/BiseledField';
-import '../../styles/BasicScores.scss'
 import LabeledInput from '../../components/LabeledInput';
+import BaseDC from '../../components/BaseDC';
+
 
 interface IProps {
 }
@@ -29,14 +30,10 @@ export default class ClassDC extends React.Component<IProps, IState>{
 				<div className='class-dc__container'>
 					<div className='class-dc__row'>
 						<BiseledField text='10' />
-						<div className='class-dc__row--base'>
-							<h1 className='class-dc__base--equals'>=</h1>
-							<h5 className='class-dc__base--h'>DC BASE</h5>
-							<h1 className='class-dc__base--h'>10</h1>
-						</div>
+						<BaseDC />
 						<LabeledInput label='KEY' value='10' />
 						<LabeledInput label='PROF' value='10' />
-						<Proficency proficency='T' />
+						<Proficency proficency='U' />
 						<LabeledInput label='ITEM' value='10' />
 					</div>
 				</div>

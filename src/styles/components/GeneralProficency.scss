@@ -1,0 +1,49 @@
+@import '../Variables.scss';
+.general-proficency {
+    display: grid;
+    grid-template-columns: repeat(4, 20px);
+    gap: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    justify-self: center;
+}
+
+.general-proficency__title {
+    @include Tauri;
+    grid-column: 1 / 5;
+    color: white;
+}
+
+.general-proficency__title>h5 {
+    text-align: center;
+    margin: 0;
+}
+
+.general-proficency__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.general-proficency__label {
+    color: white;
+    @include Tauri;
+    text-align: center;
+}
+
+.general-proficency__value {
+    border-color: $red;
+    border-style: solid;
+    border-width: 2px;
+    background-color: white;
+    flex-grow: 1;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    height: 15px;
+    width: 15px;
+}
+
+.general-proficency__icon {
+    display: block;
+    margin: auto;
+}
