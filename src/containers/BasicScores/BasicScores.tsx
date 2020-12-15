@@ -3,6 +3,7 @@ import AbilityScores from './AbilityScores';
 import '../../styles/BasicScores.scss'
 import ClassDC from './ClassDC';
 import ArmorClass from './ArmorClass';
+import SavingThrows from './SavingThrows';
 interface IProps {
     
 }
@@ -16,7 +17,7 @@ class BasicScores extends React.Component<IProps, IState>{
 			<div className='basic-scores'>
 				<AbilityScores />
 				<ArmorClass />
-				<div className="basic-scores__saving-throws">basic-scores #3</div>
+				<SavingThrows />
 				<div className="basic-scores__hit-points">basic-scores #4</div>
 				<div className="basic-scores__perception">basic-scores #5</div>
 				<ClassDC />

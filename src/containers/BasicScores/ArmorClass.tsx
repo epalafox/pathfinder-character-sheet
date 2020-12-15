@@ -28,7 +28,7 @@ export default class AbilityScore extends React.Component<IProps, IState>{
     render() {
         return (
             <div className='basic-scores__armor-class'>
-                <img src={armorImage} className='armor-class__image' alt='Armor Image' />
+                <img src={armorImage} className='armor-class__image' alt='Armor' />
                 <div className='armor-class__value'>
                     <h2>AC</h2>
                     <h1>10</h1>
@@ -69,8 +69,8 @@ export default class AbilityScore extends React.Component<IProps, IState>{
                     <div></div>
                     <div className='armor-class__shield'>
                         <h3 className='armor-class__shield--h3'>Shield</h3>
-                        <div>
-                            <h1>+</h1>
+                        <div className='armor-class__shield--dc'>
+                            <h1>+5</h1>
                         </div>
                         <LabeledInput label='HARDNESS' value='10' />
                         <LabeledInput label='MAX HP' value='10' />
